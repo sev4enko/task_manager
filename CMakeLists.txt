@@ -12,4 +12,5 @@ add_executable(task_manager
         Task.cpp
         Task.hpp
         TaskManager.cpp
-        TaskManager.hpp)
+        TaskManager.hpp
+        tests.cpp)
