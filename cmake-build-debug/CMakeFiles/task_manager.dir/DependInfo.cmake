@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/sevshapkin/Documents/C/task_manager/Task.cpp" "/Users/sevshapkin/Documents/C/task_manager/cmake-build-debug/CMakeFiles/task_manager.dir/Task.cpp.o"
   "/Users/sevshapkin/Documents/C/task_manager/TaskManager.cpp" "/Users/sevshapkin/Documents/C/task_manager/cmake-build-debug/CMakeFiles/task_manager.dir/TaskManager.cpp.o"
   "/Users/sevshapkin/Documents/C/task_manager/main.cpp" "/Users/sevshapkin/Documents/C/task_manager/cmake-build-debug/CMakeFiles/task_manager.dir/main.cpp.o"
+  "/Users/sevshapkin/Documents/C/task_manager/tests.cpp" "/Users/sevshapkin/Documents/C/task_manager/cmake-build-debug/CMakeFiles/task_manager.dir/tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

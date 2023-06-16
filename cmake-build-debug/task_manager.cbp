@@ -101,6 +101,9 @@
 		<Unit filename="/Users/sevshapkin/Documents/C/task_manager/main.cpp">
 			<Option target="task_manager"/>
 		</Unit>
+		<Unit filename="/Users/sevshapkin/Documents/C/task_manager/tests.cpp">
+			<Option target="task_manager"/>
+		</Unit>
 		<Unit filename="/Users/sevshapkin/Documents/C/task_manager/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

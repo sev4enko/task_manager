@@ -17,3 +17,7 @@ CMakeFiles/task_manager.dir/main.cpp.o: \
  ../Task.hpp \
  ../TaskManager.hpp \
  ../main.cpp
+CMakeFiles/task_manager.dir/tests.cpp.o: \
+ ../Task.hpp \
+ ../TaskManager.hpp \
+ ../tests.cpp

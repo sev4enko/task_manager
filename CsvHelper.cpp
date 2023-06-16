@@ -1,3 +1,8 @@
+/**
+
+@file CsvHelper.cpp
+@brief Реализация класса CsvHelper.
+*/
 #include "CsvHelper.hpp"
 #include <fstream>
 

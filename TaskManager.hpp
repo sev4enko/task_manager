@@ -27,6 +27,8 @@ public:
     void displayTasks();
     void saveTasksToFile(const std::string& filename);
     void loadTasksFromFile(const std::string& filename);
+
+    std::vector<Task> &getTasks();
 };
 
 #endif  // TASKMANAGER_HPP

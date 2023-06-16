@@ -6,36 +6,8 @@
 
 #IncludeRegexTransform: 
 
-/Users/sevshapkin/Documents/C/task_manager/CsvHelper.cpp
-CsvHelper.hpp
-/Users/sevshapkin/Documents/C/task_manager/CsvHelper.hpp
-fstream
--
-
-/Users/sevshapkin/Documents/C/task_manager/CsvHelper.hpp
-Task.hpp
-/Users/sevshapkin/Documents/C/task_manager/Task.hpp
-vector
--
-string
--
-
-/Users/sevshapkin/Documents/C/task_manager/Task.cpp
-Task.hpp
-/Users/sevshapkin/Documents/C/task_manager/Task.hpp
-
 /Users/sevshapkin/Documents/C/task_manager/Task.hpp
 string
--
-
-/Users/sevshapkin/Documents/C/task_manager/TaskManager.cpp
-TaskManager.hpp
-/Users/sevshapkin/Documents/C/task_manager/TaskManager.hpp
-CsvHelper.hpp
-/Users/sevshapkin/Documents/C/task_manager/CsvHelper.hpp
-algorithm
--
-iostream
 -
 
 /Users/sevshapkin/Documents/C/task_manager/TaskManager.hpp
@@ -46,11 +18,9 @@ vector
 string
 -
 
-/Users/sevshapkin/Documents/C/task_manager/main.cpp
+/Users/sevshapkin/Documents/C/task_manager/tests.cpp
 TaskManager.hpp
 /Users/sevshapkin/Documents/C/task_manager/TaskManager.hpp
-iostream
--
-limits
+cassert
 -
 

@@ -1,3 +1,8 @@
+/**
+
+@file main.cpp
+@brief Главный файл программы.
+*/
 #include "TaskManager.hpp"
 #include <iostream>
 #include <limits>

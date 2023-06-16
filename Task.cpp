@@ -1,3 +1,8 @@
+/**
+
+@file Task.cpp
+@brief Реализация класса Task.
+*/
 #include "Task.hpp"
 
 /**

@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/task_manager.dir/Task.cpp.o"
   "CMakeFiles/task_manager.dir/TaskManager.cpp.o"
   "CMakeFiles/task_manager.dir/main.cpp.o"
+  "CMakeFiles/task_manager.dir/tests.cpp.o"
   "task_manager"
   "task_manager.pdb"
 )

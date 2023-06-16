@@ -1,3 +1,8 @@
+/**
+
+@file TaskManager.cpp
+@brief Реализация класса TaskManager.
+*/
 #include "TaskManager.hpp"
 #include "CsvHelper.hpp"
 #include <algorithm>
@@ -125,4 +130,16 @@ void TaskManager::saveTasksToFile(const std::string& filename) {
 */
 void TaskManager::loadTasksFromFile(const std::string& filename) {
     tasks = CsvHelper::loadTasksFromFile(filename);
+}
+
+/**
+ * @brief Возвращает ссылку на вектор задач.
+ *
+ * Функция возвращает ссылку на вектор `tasks`, который содержит все задачи,
+ * хранящиеся в менеджере задач.
+ *
+ * @return Ссылка на вектор задач.
+ */
+std::vector<Task>& TaskManager::getTasks() {
+    return tasks;
 }

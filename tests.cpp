@@ -1,79 +1,119 @@
+/**
+ * @file tests.cpp
+ *
+ * @brief Файл, содержащий тесты для класса TaskManager.
+ */
+
 #include "TaskManager.hpp"
-#include <iostream>
+#include <cassert>
 
 /**
-
-@brief Тест функции добавления задачи.
-*/
+ * @brief Тест на добавление задачи.
+ */
 void testAddTask() {
     TaskManager taskManager;
 
-    // Добавление задачи
+    // Добавляем задачу
     taskManager.addTask("Задача 1", "Описание задачи 1", "2023-06-30");
 
-    // Проверка, что задача была добавлена
-    std::vector<Task> tasks = taskManager.getTasks();
-    if (tasks.size() == 1 && tasks[0].getTitle() == "Задача 1" && tasks[0].getDescription() == "Описание задачи 1" && tasks[0].getDeadline() == "2023-06-30") {
-        std::cout << "Тест добавления задачи пройден.\n";
-    } else {
-        std::cout << "Тест добавления задачи не пройден.\n";
-    }
+    // Получаем все задачи
+    std::vector<Task>& tasks = taskManager.getTasks();
+
+    // Проверяем, что задача была успешно добавлена
+    assert(tasks.size() == 1);
+    assert(tasks[0].getTitle() == "Задача 1");
+    assert(tasks[0].getDescription() == "Описание задачи 1");
+    assert(tasks[0].getDeadline() == "2023-06-30");
 }
 
 /**
+ * @brief Тест на редактирование задачи.
+ */
+void testEditTask() {
+    TaskManager taskManager;
 
-@brief Тест функции удаления задачи.
-*/
+    // Добавляем задачу
+    taskManager.addTask("Задача 1", "Описание задачи 1", "2023-06-30");
+
+    // Редактируем задачу
+    taskManager.editTask(0, "Новая задача", "Новое описание", "2023-07-01");
+
+    // Получаем все задачи
+    std::vector<Task>& tasks = taskManager.getTasks();
+
+    // Проверяем, что задача была успешно отредактирована
+    assert(tasks[0].getTitle() == "Новая задача");
+    assert(tasks[0].getDescription() == "Новое описание");
+    assert(tasks[0].getDeadline() == "2023-07-01");
+}
+
+/**
+ * @brief Тест на удаление задачи.
+ */
 void testDeleteTask() {
     TaskManager taskManager;
 
-    // Добавление задачи
+    // Добавляем задачу
     taskManager.addTask("Задача 1", "Описание задачи 1", "2023-06-30");
 
-    // Удаление задачи
+    // Удаляем задачу
     taskManager.deleteTask(0);
 
-    // Проверка, что задача была удалена
-    std::vector<Task> tasks = taskManager.getTasks();
-    if (tasks.empty()) {
-        std::cout << "Тест удаления задачи пройден.\n";
-    } else {
-        std::cout << "Тест удаления задачи не пройден.\n";
-    }
+    // Получаем все задачи
+    std::vector<Task>& tasks = taskManager.getTasks();
+
+    // Проверяем, что задача была успешно удалена
+    assert(tasks.empty());
 }
 
 /**
-
-@brief Тест функции отметки выполнения задачи.
-*/
+ * @brief Тест на отметку задачи как выполненной.
+ */
 void testMarkTaskAsCompleted() {
     TaskManager taskManager;
 
-    // Добавление задачи
+    // Добавляем задачу
     taskManager.addTask("Задача 1", "Описание задачи 1", "2023-06-30");
 
-    // Отметка задачи как выполненной
+    // Отмечаем задачу как выполненную
     taskManager.markTaskAsCompleted(0);
 
-    // Проверка, что задача была отмечена как выполненная
-    std::vector<Task> tasks = taskManager.getTasks();
-    if (!tasks.empty() && tasks[0].isCompleted()) {
-        std::cout << "Тест отметки выполнения задачи пройден.\n";
-    } else {
-        std::cout << "Тест отметки выполнения задачи не пройден.\n";
-    }
+    // Получаем все задачи
+    std::vector<Task>& tasks = taskManager.getTasks();
+
+    // Проверяем, что задача была отмечена как выполненная
+    assert(tasks[0].isCompleted());
 }
 
 /**
+ * @brief Тест на сортировку задач по дедлайну.
+ */
+void testSortTasksByDeadline() {
+    TaskManager taskManager;
 
-@brief Главная функция тестов.
-@return Код возврата.
-*/
-int main() {
-    testAddTask();
-    testDeleteTask();
-    testMarkTaskAsCompleted();
+    // Добавляем несколько задач
+    taskManager.addTask("Задача 1", "Описание задачи 1", "2023-06-30");
+    taskManager.addTask("Задача 2", "Описание задачи 2", "2023-06-15");
+    taskManager.addTask("Задача 3", "Описание задачи 3", "2023-07-10");
 
-    return 0;
+    // Сортируем задачи по дедлайну
+    taskManager.sortTasksByDeadline();
+
+    // Получаем все задачи
+    std::vector<Task>& tasks = taskManager.getTasks();
+
+    // Проверяем, что задачи отсортированы в правильном порядке
+    assert(tasks[0].getTitle() == "Задача 2");
+    assert(tasks[1].getTitle() == "Задача 1");
+    assert(tasks[2].getTitle() == "Задача 3");
 }
 
+//int main() {
+  //  testAddTask();
+    //testEditTask();
+    //testDeleteTask();
+    //testMarkTaskAsCompleted();
+    //testSortTasksByDeadline();
+
+    //return 0;
+//}
