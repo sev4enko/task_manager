@@ -5,6 +5,13 @@
 #include <vector>
 #include <string>
 
+/**
+
+@class TaskManager
+@brief Класс, управляющий задачами.
+Класс TaskManager предоставляет функциональность для добавления, редактирования,
+удаления, отметки выполнения, сортировки, поиска, сохранения и загрузки задач.
+*/
 class TaskManager {
 private:
     std::vector<Task> tasks;

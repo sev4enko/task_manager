@@ -1,6 +1,13 @@
 #include "CsvHelper.hpp"
 #include <fstream>
 
+/**
+
+@brief Сохраняет список задач в CSV файл.
+@param filename Имя файла для сохранения.
+@param tasks Вектор задач для сохранения.
+@return true, если сохранение прошло успешно, false в противном случае.
+*/
 void CsvHelper::saveTasksToFile(const std::string& filename, const std::vector<Task>& tasks) {
     std::ofstream file(filename);
     if (file.is_open()) {
@@ -11,6 +18,12 @@ void CsvHelper::saveTasksToFile(const std::string& filename, const std::vector<T
     }
 }
 
+/**
+
+@brief Загружает список задач из CSV файла.
+@param filename Имя файла для загрузки.
+@return Вектор задач, загруженных из файла.
+*/
 std::vector<Task> CsvHelper::loadTasksFromFile(const std::string& filename) {
     std::vector<Task> tasks;
     std::ifstream file(filename);

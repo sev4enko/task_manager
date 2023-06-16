@@ -1,6 +1,10 @@
 #include "TaskManager.hpp"
 #include <iostream>
 
+/**
+
+@brief Тест функции добавления задачи.
+*/
 void testAddTask() {
     TaskManager taskManager;
 
@@ -16,6 +20,10 @@ void testAddTask() {
     }
 }
 
+/**
+
+@brief Тест функции удаления задачи.
+*/
 void testDeleteTask() {
     TaskManager taskManager;
 
@@ -34,6 +42,10 @@ void testDeleteTask() {
     }
 }
 
+/**
+
+@brief Тест функции отметки выполнения задачи.
+*/
 void testMarkTaskAsCompleted() {
     TaskManager taskManager;
 
@@ -52,6 +64,11 @@ void testMarkTaskAsCompleted() {
     }
 }
 
+/**
+
+@brief Главная функция тестов.
+@return Код возврата.
+*/
 int main() {
     testAddTask();
     testDeleteTask();
